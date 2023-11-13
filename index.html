@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Trab Prointer</title>
+  </head>
+
+  <body>
+    <div class="nav-bar">
+      <div class="logo">PROINTER</div>
+      <div class="links">
+        <a href="?cod=1">Código 1</a>
+        <a href="?cod=2">Código 2</a>
+        <a href="?cod=3">Código 3</a>
+        <a href="?cod=4">Código 4</a>
+        <a href="?cod=5">Código 5</a>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="questao-wrapper">
+        Faça um script para uma loja de tintas. O script deverá pedir o tamanho
+        em metros quadrados da área a ser pintada. Considere que a cobertura da
+        tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida
+        em latas de 18 litros, que custam R$ 80,00 ou em galões de 3,6 litros,
+        que custam R$ 25,00.
+        <br />
+        Informe ao usuário as quantidades de tinta a serem compradas e os
+        respectivos preços em 3 situações: comprar apenas latas de 18 litros;
+        comprar apenas galões de 3,6 litros; misturar latas e galões, de forma
+        que o preço seja o menor. Acrescente 10% de folga e sempre arredonde os
+        valores para cima, isto é, considere latas cheias.
+      </div>
+      <div class="codigo-wrapper">
+        :root { --primary-color: #fff; } body { font-family: Arial; margin: 0; }
+        /*======================== header ==========================*/ .header {
+        position: fixed; z-index: 99; background-color: #14213d; width: 100%;
+        height: 5rem; display: flex; flex-direction: row; justify-content:
+        space-between; align-items: center; box-shadow: 0.11px 0.1px 3px
+        #969696; font-size: 15px; } .header-title { padding-left: 1rem;
+        font-size: 200%; font-weight: 600; color: #fff; } .header-user {
+        margin-right: 2rem; padding: 5px; width: 10rem; height: 3.7rem; display:
+        flex; flex-direction: row; justify-content: space-between; align-items:
+        center; background-color: #efb659; border-radius: 2px; } .user-avatar{
+        height: 3rem; width: 3rem; background-color: black; border-radius: 5px;
+        color: #fff; display: flex; flex-direction: row; align-items: center;
+        justify-content: center; letter-spacing: .1rem; font-size: 180%; }
+        .user-expand{ font-size: 200%; display: flex; justify-content: center;
+        align-items: center; } .mobile-menu{ display: none; } #drop-user{
+        position: fixed; width: 10rem; height: 3.7rem; cursor: pointer; opacity:
+        0; } #drop-user:checked + .dropdown-user { opacity: 1; transform:
+        translateY(.5rem); pointer-events: auto; } .dropdown-user{ display:
+        flex; flex-direction: column; justify-content: center; align-items:
+        flex-end; position: absolute; right: 2rem; width: 8rem; top: calc(40% +
+        2rem); background-color: #fff; padding: 0.75rem; box-shadow: 0 2px 5px
+        rgba(0, 0, 0, 0.1); border: 0.1px solid #d6d6d6; opacity: 0;
+        pointer-events: none; transform: translateY(-10px); transition: opacity
+        150ms ease-in-out, transform 150ms ease-in-out; }
+        /*===================== wrapper da pag ===========================*/
+        .adm-wrapper { padding-top: 5rem; display: flex; flex-direction: row;
+        min-height: 90dvh; font-size: 15px; } /*===================== dashboard
+        =======================*/ .left-dash { position: fixed;
+        background-color: #023047; width: 15rem; min-height: 90dvh; max-height:
+        90dvh; overflow-y: auto; overflow-x: hidden; color: #fff; word-break:
+        break-all; padding-bottom: 100px; } .dash-section{ max-width: 15rem;
+        width: 100%; padding: 1rem; padding-bottom: 1.5rem; } .section-title{
+        font-weight: bold; margin-bottom: 20px; font-size: 150%; }
+        .section-items{ display: flex; flex-direction: column; gap: 2px;
+        padding-left: 1rem; padding-right: .8rem; } .section-items a{ padding:
+        .5rem; text-decoration: none; font-size: 110%; color: #f5f5f5;
+        transition: all .3s; } .section-items a.active{ padding:1rem;
+        background-color: #000f17; border-radius: 5px 0px 0px 05px; }
+        .section-items a.active:hover{ cursor: default; background-color:
+        #000f17; } .section-items a:hover{ background-color: #012233;
+        border-radius: 5px 0px 0px 05px; cursor: pointer; }
+        /*====================== pagina ========================*/ .page-content
+        { background-color: #f5f5f5; padding-top: 2rem; padding-left: 16rem;
+        padding-right: 1rem; } @media (max-width:700px) { .user-name,
+        .header-title{ display: none; } .mobile-menu{ display: block;
+        padding-left: .8rem; font-size: 50px; color: #f5f5f5; position:
+        relative; } .close-icon{ display: none; } .menu-icon{ width: 50px;
+        background-color: #000f17; } .drop-mob-menu{ top: 5rem; opacity: 0;
+        pointer-events: none; transform: translateX(-300px); transition: opacity
+        150ms ease-in-out, transform 150ms ease-in-out; } #drop-menu{ position:
+        absolute; height: 50px; width: 50px; opacity: 0; cursor: pointer; }
+        #drop-menu:checked + .menu-icon{ display: none; } #drop-menu:checked ~
+        .close-icon{ display: block; background-color: #000f17; }
+        #drop-menu:checked > .adm-wrapper{ pointer-events: none;
+        background-color: #000f17; } #drop-menu:checked ~.drop-mob-menu{
+        opacity: 1; transform: translateY(5rem); transform: translateX(-13px);
+        position: fixed; height: 200px; width: 200px; background-color: #ff0000;
+        transition: all .5s; } .header-user{ width: 5rem; } #drop-user{ width:
+        5rem; } .left-dash{ display: none; } .page-content { background-color:
+        #f5f5f5; padding-top: 2rem; padding-left: 1rem; padding-right: 1rem; } }
+      </div>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>
