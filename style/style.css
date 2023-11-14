@@ -162,3 +162,16 @@ button:active {
 form {
   padding-top: 1rem;
 }
+.select-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+/* @media (max-width: 480px) {
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+} */
