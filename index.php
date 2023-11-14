@@ -234,7 +234,7 @@ if ($page == 3) {
             <div class="input-item">
                 $var_1 =
                 <input type="text" name="var_1" maxlength="8" onkeyup="mascaraMoeda(this, event, '0')"
-                    <?php print @$var_1 ?> placeholder="Somente Numeros" />
+                    value="<?php print @$var_1 ?>" placeholder="Somente Numeros" />
             </div>
             <div class="input-item">
                 $var_2 =
@@ -366,37 +366,19 @@ if ($page == 4) {
 <div class="questao-wrapper">
     <h2>Codg. 4 - Uso do Conectivo OU (<b>||</b>)</h2>
     <div class="questao">
-        O conectivo OU ( || ) tem como objetivo ser utilizadom quando o resultado de uma condicional depende de pelo
-        mwnos um valor, não simultâneo para continuar a execução do código.
+        O conectivo 'OU' ( || ) tem como objetivo ser utilizadom quando o resultado de uma condicional depende de pelo
+        menos um valor, não obrigatoriamente simultâneo, para continuar a execução do código.
         Ao lado, temos um código onde 2 números, digitados no <b style="color: #eb5e28;">input</b> abaixo, vão ser
-        condicionados
-        dentro de um <b style="color: #eb5e28;">if()</b>, igual ao código anterior, com a diferença do conectivo OU.
+        condicionados dentro de um <b style="color: #eb5e28;">if()</b>, igual ao código anterior, com a
+        diferença do conectivo OU (||)ao invés do 'E' (&&).
     </div>
 
-    <form action="" method="post" style="display: none">
-        <div class="input-wrap">
-            <select name="" id="">
-                <option value="">Fox on the run</option>
-            </select>
-            <select name="" id="">
-                <option value="">Screamin! Everybody run</option>
-            </select>
-            <div class="buttons-wrap">
-                <button type="submit" style="background-color: rgb(63, 151, 63)">
-                    Enviar
-                </button>
-                <button type="reset" style="background-color: rgb(255, 191, 0)">
-                    Limpar
-                </button>
-            </div>
-        </div>
-    </form>
     <form action="" method="post">
         <div class="input-wrap">
             <div class="input-item">
                 $var_1 =
                 <input type="text" name="var_1" maxlength="8" onkeyup="mascaraMoeda(this, event, '0')"
-                    <?php print @$var_1; ?> placeholder="Somente Numeros" />
+                    value="<?php print @$var_1; ?>" placeholder="Somente Numeros" />
             </div>
             <div class="input-item">
                 $var_2 =

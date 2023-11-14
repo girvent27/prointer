@@ -133,8 +133,10 @@ input {
   height: 2rem;
   width: 9rem;
   border-bottom: solid 0.1rem #403d39;
+  text-align: center;
 }
 select {
+  text-align: center;
   border: none;
   background-color: aliceblue;
   border-radius: 5px;
