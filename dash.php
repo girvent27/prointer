@@ -37,7 +37,18 @@ function dash()
     {
         ?>
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+        <div class="logo" style="color: #f5f5f5;">PROINTER</div>
+
+        <ul>
+            <ol><a href="?cod=1">Código 1</a></ol>
+            <ol><a href="?cod=2">Código 2</a></ol>
+            <ol><a href="?cod=3">Código 3</a></ol>
+            <ol><a href="?cod=4">Código 4</a></ol>
+
+        </ul>
+    </div>
+    <div class="by">Desenvolvido por J. L. Girvent, 2023</div>
     <script>
     hljs.highlightAll();
 
